@@ -1,6 +1,6 @@
 import { assert } from 'chai'
 
-describe('Array fail test', function () {
+describe('Array pass test', function () {
   describe('#indexOf()', function () {
     it('should return -1 when the value is not present', function () {
       assert.equal([1, 2, 3].indexOf(4), -1)
