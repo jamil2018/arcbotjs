@@ -1,2 +1,2 @@
 export { getAllTestFiles } from './pathUtils'
-export { defineConfig } from './configUtils'
+export { defineTestConfig } from './configUtils'

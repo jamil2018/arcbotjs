@@ -4,18 +4,17 @@ import Mocha = require('mocha')
 
 import testConfig from './src/config/testConfig'
 import { getAllTestFiles } from './src/utils'
+import { getReporterConfig } from './src/utils/configUtils'
 
 if (process.env.NODE_ENV !== 'Production') {
   dotenv.config()
 }
 
+// setting reporter config
+const reporterConfig = getReporterConfig(testConfig.reporters)
+
 // creating mocha instance and setting up reporter
-const mocha = new Mocha({
-  reporter: 'mochawesome',
-  reporterOptions: {
-    reportDir: testConfig.reportPath,
-  },
-})
+const mocha = new Mocha({ ...reporterConfig })
 
 // fetching all test files
 /**

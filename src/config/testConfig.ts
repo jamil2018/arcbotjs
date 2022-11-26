@@ -1,6 +1,9 @@
-import { defineConfig } from '../utils'
+import { defineTestConfig } from '../utils'
 
-export default defineConfig({
+export default defineTestConfig({
   testPath: 'src/specs',
   reportPath: 'src/reports',
+  reporters: {
+    mochaAwesome: true,
+  },
 })
