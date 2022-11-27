@@ -10,6 +10,8 @@
     "sourceType": "module",
     "project": ["./tsconfig.json"]
   },
-  "rules": {},
+  "rules": {
+    "no-console": "error"
+  },
   "plugins": ["mocha"]
 }

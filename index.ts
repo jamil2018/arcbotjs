@@ -2,7 +2,7 @@ import * as dotenv from 'dotenv'
 import 'ts-mocha'
 import Mocha = require('mocha')
 
-import testConfig from './src/config/testConfig'
+import { testConfig } from './src/config/testConfig'
 import { getAllTestFiles } from './src/utils'
 import { getReporterConfig } from './src/utils/configUtils'
 
@@ -11,7 +11,10 @@ if (process.env.NODE_ENV !== 'Production') {
 }
 
 // setting reporter config
-const reporterConfig = getReporterConfig(testConfig.reporters)
+const reporterConfig = getReporterConfig(
+  testConfig.reporters,
+  testConfig.reportPath
+)
 
 // creating mocha instance and setting up reporter
 const mocha = new Mocha({ ...reporterConfig })
@@ -22,7 +25,7 @@ const mocha = new Mocha({ ...reporterConfig })
  */
 const testFiles = getAllTestFiles(testConfig.testPath)
 
-// feeding test file paths to run to mocha
+// feeding test file paths to mocha
 testFiles.map((file) => mocha.addFile(file))
 
 // starting tests

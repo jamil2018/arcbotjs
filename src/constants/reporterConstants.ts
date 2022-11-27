@@ -1,18 +1,5 @@
-import testConfig from '../config/testConfig'
-
 const reporterConstants = {
-  MOCHA_AWESOME: {
-    reporter: 'mochawesome',
-    reporterOptions: {
-      reportDir: '../reports',
-    },
-  },
-  ALLURE: {
-    reporter: 'mocha-allure-reporter',
-    reporterOptions: {
-      targetDir: '../reports',
-    },
-  },
+  MOCHA_AWESOME: 'mochawesome',
+  ALLURE: 'mocha-allure-reporter',
 }
-console.warn(testConfig)
 export { reporterConstants }

@@ -1,1 +1,1 @@
-export { default as testConfig } from './testConfig'
+export { testConfig } from './testConfig'
