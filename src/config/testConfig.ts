@@ -1,11 +1,11 @@
-import { defineTestConfig } from '../utils'
+import { TestConfig } from '../types'
 
-const testConfig = defineTestConfig({
+const testConfig: TestConfig = {
   testPath: 'src/specs',
   reportPath: 'src/reports',
   reporters: {
     mochaAwesome: true,
   },
-})
+}
 
 export { testConfig }

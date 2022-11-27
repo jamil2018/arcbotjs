@@ -1,10 +1,5 @@
 import { reporterConstants } from '../constants'
-import { TestConfig } from '../types'
 import { ReporterConfig } from '../types/configUtilTypes'
-
-const defineTestConfig = (opts: TestConfig): TestConfig => {
-  return opts
-}
 
 const getReporterConfig = (
   reporter: {
@@ -42,4 +37,4 @@ const getReporterConfig = (
   return reporterConfig
 }
 
-export { defineTestConfig, getReporterConfig }
+export { getReporterConfig }

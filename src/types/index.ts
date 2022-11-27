@@ -1,1 +1,6 @@
-export { TestConfig } from './configUtilTypes'
+export {
+  TestConfig,
+  APIConfig,
+  DBConfig,
+  ReporterConfig,
+} from './configUtilTypes'

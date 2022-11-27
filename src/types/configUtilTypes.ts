@@ -13,4 +13,19 @@ interface ReporterConfig {
   reporterOptions: { reportDir?: string; targetDir?: string }
 }
 
-export { TestConfig, ReporterConfig }
+interface APIConfig {
+  baseURL?: string
+  routes?: {
+    [key: string]: {
+      index: string
+      [key: string]: string
+    }
+  }
+}
+
+interface DBConfig {
+  mongoDb?: boolean
+  postgres?: boolean
+}
+
+export { TestConfig, ReporterConfig, APIConfig, DBConfig }
