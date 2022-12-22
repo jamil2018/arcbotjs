@@ -28,4 +28,11 @@ interface DBConfig {
   postgres?: boolean
 }
 
-export { TestConfig, ReporterConfig, APIConfig, DBConfig }
+interface pgConfig {
+  host: string
+  port: number
+  user: string
+  password: string
+}
+
+export { TestConfig, ReporterConfig, APIConfig, DBConfig, pgConfig }
