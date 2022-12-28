@@ -13,7 +13,7 @@ const getReporterConfig = (
     reporterOptions: { reportDir: undefined, targetDir: undefined },
   }
 
-  if (reporter.allure === undefined || reporter.mochaAwesome === undefined)
+  if (reporter.allure === undefined && reporter.mochaAwesome === undefined)
     reporterConfig = {
       reporter: reporterConstants.MOCHA_AWESOME,
       reporterOptions: {
