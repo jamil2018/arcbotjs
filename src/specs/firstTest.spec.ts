@@ -1,12 +1,13 @@
 import { assert } from 'chai'
 import { By, WebDriver } from 'selenium-webdriver'
+import { webDriverBrowsers } from '../constants/webdriverConstants'
 import { WebDriverGenerator } from '../core/webDriverCore'
 
 describe('Selenium test', function () {
   let driver: WebDriver
 
   before(async function () {
-    const driverGenerator = new WebDriverGenerator('chrome')
+    const driverGenerator = new WebDriverGenerator(webDriverBrowsers.edge)
     driver = await driverGenerator.driver
   })
   after(async () => await driver.quit())
