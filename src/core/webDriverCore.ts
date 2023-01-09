@@ -71,6 +71,24 @@ class WebElementFinder {
   async getElementsByClassName(locator: string): Promise<WebElement[]> {
     return await this._driver.findElements(By.className(locator))
   }
+
+  // find elements by xpath
+  async getElementByXpath(locator: string): Promise<WebElement> {
+    return await this._driver.findElement(By.xpath(locator))
+  }
+
+  async getElementsByXpath(locator: string): Promise<WebElement[]> {
+    return await this._driver.findElements(By.xpath(locator))
+  }
+
+  // find elements by name
+  async getElementByName(locator: string): Promise<WebElement> {
+    return await this._driver.findElement(By.name(locator))
+  }
+
+  async getElementsByName(locator: string): Promise<WebElement[]> {
+    return await this._driver.findElements(By.name(locator))
+  }
 }
 
 export { WebDriverGenerator, WebElementFinder }

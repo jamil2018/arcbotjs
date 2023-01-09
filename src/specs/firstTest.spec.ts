@@ -2,6 +2,7 @@ import { assert } from 'chai'
 import { By, WebDriver } from 'selenium-webdriver'
 import { webDriverBrowsers } from '../constants/webdriverConstants'
 import { WebDriverGenerator } from '../core/webDriverCore'
+import fs from 'fs'
 
 describe('Selenium test', function () {
   let driver: WebDriver
